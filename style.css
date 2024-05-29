@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Climate+Crisis&family=DM+Serif+Display:ital@0;1&family=Dorsa&family=Freeman&family=Honk&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Ojuju:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Radio+Canada+Big:wght@400..700&family=Rammetto+One&family=Rationale&family=Shojumaru&family=Teko:wght@700&display=swap');
+
+.background {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/520/947/752/blueprint-dark-texture-technical-wallpaper-preview.jpg);
+
+}
+
+.row {
+    margin-top: 40vh;
+
+}
+
+.counter-box {
+    text-align: center;
+    color: #ff9800;
+    background-color: transparent;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+}
+
+.counter-box:hover {
+    .corner-1, .corner-2, .corner-3, .corner-4, .counter-value,
+    .counter-text {
+        border: none;
+        cursor: default;
+    }
+
+}
+.counter-box:hover {
+    .corner-1, .corner-2, .corner-3, .corner-4 {
+        border: none;
+    }
+}
+
+.counter-box .corner-1,
+.counter-box .corner-2,
+.counter-box .corner-3,
+.counter-box .corner-4 {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ff9800;
+}
+
+.counter-box:before,
+.counter-box:after {
+    width: 0;
+    height: 0;
+}
+
+.counter-box .corner-1 {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+.counter-box .corner-2 {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+}
+
+.counter-box .corner-3 {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 2px 2px;
+}
+
+.counter-box .corner-4 {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+.counter-value {
+    font-size: 5.5vh;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.counter-text {
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+}
+
+
+/* Small screens (up to 767px) */
+@media (max-width: 767px) {
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .row {
+        margin-top: -3vh;
+        width: 50vh;
+        gap: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 14vh;
+    }
+    .counter-box {
+        width: 90%;
+        margin-left: -5vh;
+        margin-right: 0;
+    }
+
+    .counter-box .corner-1,
+    .counter-box .corner-2,
+    .counter-box .corner-3,
+    .counter-box .corner-4 {
+        width: 12px;
+        height: 12px;
+    }
+}
+/* Small screens (up to 500px) */
+@media (max-width: 500px) {
+    .row {
+        margin-top: -2vh;
+        width: 100%;
+        gap: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .counter-box {
+        width: 95%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .counter-box .corner-1,
+    .counter-box .corner-2,
+    .counter-box .corner-3,
+    .counter-box .corner-4 {
+        width: 15px;
+        height: 15px;
+    }
+}
